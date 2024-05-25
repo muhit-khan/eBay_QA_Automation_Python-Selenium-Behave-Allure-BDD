@@ -1,36 +1,63 @@
-from behave import given, when, then
+from behave import *
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from features.steps.common_steps import *
 
-@then('the navigation bar should have "Electronics", "Saved", and "Motors" links')
-def step_impl(context):
-    assert context.driver.find_element(By.LINK_TEXT, "Electronics")
-    assert context.driver.find_element(By.LINK_TEXT, "Saved")
-    assert context.driver.find_element(By.LINK_TEXT, "Motors")
+# Helper function to check visibility of navigation links
+def check_nav_link(context, xpath, link_name):
+    try:
+        print(f"Checking visibility of {link_name} with selector {xpath}")
+        link = WebDriverWait(context.driver, 20).until(
+            EC.visibility_of_element_located((By.XPATH, xpath))
+        )
+        assert link.is_displayed(), f"{link_name} is displayed"
+    except (TimeoutException, NoSuchElementException) as e:
+        print(f"Exception during {link_name} link verification: {e}")
+        context.driver.save_screenshot(f"{link_name.replace(' ', '_')}_error.png")
+        raise e
 
-@then('the user should be able to navigate to the "eBay Community" page')
+@then('I should see the Saved in navigation bar')
 def step_impl(context):
-    context.driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-    wait = WebDriverWait(context.driver, 30)
-    footer_link = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="gf-BIG"]/table/tbody/tr/td[5]/ul[2]/li[2]/a')))
-    footer_link.click()
-    assert "eBay Community" in context.driver.title
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[1]/a', "Saved")
 
-@then('the eBay logo should link to the homepage')
+@then('I should see the Electronics in navigation bar')
 def step_impl(context):
-    logo = context.driver.find_element(By.ID, "gh-la")
-    logo.click()
-    assert context.driver.current_url == "https://www.ebay.com/"
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[2]/a', "Electronics")
 
-@then('the user should be able to navigate to the "Electronics" category')
+@then('I should see the Motors in navigation bar')
 def step_impl(context):
-    category_link = context.driver.find_element(By.LINK_TEXT, "Electronics")
-    category_link.click()
-    assert "Electronics" in context.driver.title
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[3]/a', "Motors")
 
-@then('the user should be able to navigate to the "Cell Phones & Accessories" sub-category')
+@then('I should see the Fashion in navigation bar')
 def step_impl(context):
-    sub_category_link = context.driver.find_element(By.LINK_TEXT, "Cell Phones & Accessories")
-    sub_category_link.click()
-    assert "Cell Phones & Accessories" in context.driver.title
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[4]/a', "Fashion")
+
+@then('I should see the Collectibles and Art in navigation bar')
+def step_impl(context):
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[5]/a', "Collectibles and Art")
+
+@then('I should see the Sports in navigation bar')
+def step_impl(context):
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[6]/a', "Sports")
+
+@then('I should see the Health & Beauty in navigation bar')
+def step_impl(context):
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[7]/a', "Health & Beauty")
+
+@then('I should see the Industrial equipment in navigation bar')
+def step_impl(context):
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[8]/a', "Industrial equipment")
+
+@then('I should see the Home & Garden in navigation bar')
+def step_impl(context):
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[9]/a', "Home & Garden")
+
+@then('I should see the Deals in navigation bar')
+def step_impl(context):
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[10]/a', "Deals")
+
+@then('I should see the Sell in navigation bar')
+def step_impl(context):
+    check_nav_link(context, '//*[@id="vl-flyout-nav"]/ul/li[11]/a', "Sell")

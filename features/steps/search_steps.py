@@ -1,51 +1,53 @@
-from behave import given, when, then
+#search_steps.py 
+from behave import *
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from features.steps.common_steps import *
 
-@given('the user searches for "Laptop"')
-def step_impl(context):
-    context.driver.get("https://www.ebay.com")
-    search_box = context.driver.find_element(By.NAME, "_nkw")
-    search_box.send_keys("Laptop")
-    search_box.submit()
+def perform_search(context, search_term):
+    try:
+        search_bar = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.ID, "gh-ac"))
+        )
+        search_bar.clear()
+        search_bar.send_keys(search_term)
+        search_bar.submit()
+    except (TimeoutException, NoSuchElementException) as e:
+        print(f"Exception during search for {search_term}: {e}")
+        raise e
 
-@then('the search results should contain "Laptop" in the title')
-def step_impl(context):
-    assert "Laptop" in context.driver.title
+def verify_search_results(context, search_term):
+    try:
+        search_results = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, ".srp-controls__count-heading"))
+        )
+        assert search_term.lower() in context.driver.page_source.lower(), f"{search_term} not found in search results"
+    except (TimeoutException, NoSuchElementException) as e:
+        print(f"Exception during verification of search results for {search_term}: {e}")
+        raise e
 
-@then('the search results should be displayed')
+@when('I search for "iPhone"')
 def step_impl(context):
-    assert context.driver.find_elements(By.CSS_SELECTOR, ".s-item")
+    perform_search(context, "iPhone")
 
-@given('the user clicks the search button after entering "laptop"')
+@then('I should see "iPhone" in the search results')
 def step_impl(context):
-    context.driver.get("https://www.ebay.com")
-    search_box = context.driver.find_element(By.ID, "gh-ac")
-    search_box.send_keys("laptop")
-    search_button = context.driver.find_element(By.ID, "gh-btn")
-    search_button.click()
+    verify_search_results(context, "iPhone")
 
-@given('the user navigates to the search results page for "Laptop"')
+@when('I search for "Samsung"')
 def step_impl(context):
-    context.driver.get("https://www.ebay.com/sch/i.html?_nkw=Laptop")
+    perform_search(context, "Samsung")
 
-@then('the pagination should be displayed and functional')
+@then('I should see "Samsung" in the search results')
 def step_impl(context):
-    pagination = WebDriverWait(context.driver, 10).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, ".pagination__items"))
-    )
-    assert pagination.is_displayed()
-    next_button = context.driver.find_element(By.CSS_SELECTOR, ".pagination__next")
-    next_button.click()
-    WebDriverWait(context.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".pagination__items")))
+    verify_search_results(context, "Samsung")
 
-@then('the user should be able to filter results by "New" condition')
+@when('I search for "Nokia"')
 def step_impl(context):
-    new_condition_filter = WebDriverWait(context.driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//input[@aria-label='New']"))
-    )
-    new_condition_filter.click()
-    WebDriverWait(context.driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'New')]"))
-    )
+    perform_search(context, "Nokia")
+
+@then('I should see "Nokia" in the search results')
+def step_impl(context):
+    verify_search_results(context, "Nokia")

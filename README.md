@@ -1,2 +1,0 @@
-# eBay_QA_Automation_with_SeleniumAndPythonBehave
- 
