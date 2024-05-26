@@ -6,7 +6,7 @@ This repository contains automated tests for eBay using Selenium and Python Beha
 
 - Automated tests for various eBay functionalities
 - Easy-to-understand Gherkin syntax
-- Integration with Selenium for browser automation
+<!-- - Integration with Selenium for browser automation -->
 - Detailed test reports for easy analysis
 - Generation of Allure reports for better visualization of test results
 
