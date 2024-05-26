@@ -1,3 +1,4 @@
+#navigation.feature
 Feature: Navigation
     Scenario: Test Ebay Navigation Bar Links
         Given I launch Chrome Browser

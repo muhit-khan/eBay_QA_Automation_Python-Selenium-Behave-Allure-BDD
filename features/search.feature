@@ -1,3 +1,4 @@
+# search.feature
 Feature: Search
     Scenario: Search for a product
         Given I launch Chrome Browser

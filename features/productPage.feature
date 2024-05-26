@@ -1,3 +1,4 @@
+#productPage.feature
 Feature: Product Page
     Scenario: User can view product details
         Given I launch Chrome Browser
