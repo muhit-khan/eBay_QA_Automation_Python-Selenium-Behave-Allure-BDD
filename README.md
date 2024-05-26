@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # **eBay QA Automation with Python, Selenium, Behave, and Allure**
 
 This repository contains automated tests for eBay using Selenium and Python Behave. The tests are written in Gherkin syntax and can be easily understood by both technical and non-technical stakeholders.
@@ -91,4 +90,3 @@ This will generate an HTML report that can be accessed in a web browser.
 ## **License**
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
->>>>>>> 1397d4120fef8b51bebdca4a9b99a4f6769d026b
