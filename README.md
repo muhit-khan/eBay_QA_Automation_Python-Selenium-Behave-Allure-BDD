@@ -39,7 +39,8 @@ To view the test reports, navigate to the repository root and execute the follow
 
 This will generate an HTML report that can be accessed in a web browser.
 
-![image](https://github.com/muhit-khan/eBay_QA_Automation_Python-Selenium-Behave-Allure-BDD/assets/68416439/f51ed557-600f-49b3-b3a5-97b4ade88d69)
+![image](https://github.com/muhit-khan/eBay_QA_Automation_Python-Selenium-Behave-Allure-BDD/assets/68416439/dcda79b6-8c72-4bf2-865b-695f883c7255)
+
 
 
 ## **License**
