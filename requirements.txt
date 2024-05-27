@@ -2,3 +2,4 @@ behave
 selenium
 allure-behave
 webdriver_manager
+bs4

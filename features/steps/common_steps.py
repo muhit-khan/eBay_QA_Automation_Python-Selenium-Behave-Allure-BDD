@@ -16,7 +16,9 @@ def step_impl(context):
     try:
         context.driver.get("https://www.ebay.com")
         context.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        WebDriverWait(context.driver, 10)
+        WebDriverWait(context.driver, 5)
+        context.driver.execute_script("window.scrollTo(0, 0);")
+        WebDriverWait(context.driver, 5)
     except WebDriverException as e:
         print(f"Exception during opening homepage: {e}")
         raise e

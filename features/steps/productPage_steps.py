@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from features.steps.common_steps import *
-from bs4 import BeautifulSoup
 
 
 @when('I search for "HP"')
@@ -32,36 +31,6 @@ def step_impl(context):
         print(f"Exception during verification of search results for HP: {e}")
         raise e
 
-# @then('I view the product details of the seventh product')
-# def step_impl(context):
-#     try:
-#         # Get the product info container
-#         product_info = WebDriverWait(context.driver, 10).until(
-#             EC.visibility_of_element_located((By.XPATH, '/html/body/div[5]/div[4]/div[3]/div[1]/div[2]/ul/li[3]'))
-#         ).get_attribute("innerHTML")
-        
-#         # soup = BeautifulSoup(product_info, 'html.parser')
-#         # a_tag = soup.find('a', href=True)
-#         # seventh_productLink = a_tag['href'] if a_tag else None
-#         # seventh_productLink = soup.find('a', class_='s-item__link')['href']
-        
-#         # Parse the HTML element using Selenium
-#         context.driver.get("data:text/html;charset=utf-8," + product_info)
-
-#         # Find the link element
-#         link_element = context.driver.find_element_by_css_selector("a.s-item__link")
-
-#         # Get the link URL
-#         link = link_element.get_attribute("href")
-#         context.driver.get(link)
-        
-#         # if seventh_productLink:
-#             # context.driver.get(seventh_productLink)
-        
-#     except (TimeoutException, NoSuchElementException) as e:
-#         print(f"Exception during verification of product name: {e}")
-#         raise e
-
 
 @then('I view the product details of the seventh product')
 def step_impl(context):
@@ -79,8 +48,6 @@ def step_impl(context):
     except (TimeoutException, NoSuchElementException, AssertionError) as e:
         print(f"Exception during navigation to the seventh product: {e}")
         raise e
-
-
 
 
 @then('I should see the product name on the product page')
@@ -127,3 +94,106 @@ def step_impl(context):
     except (TimeoutException, NoSuchElementException, AssertionError) as e:
         print(f"Exception during verification of product image: {e}")
         raise e
+    
+    
+
+
+
+@then('I should see the About this item button')
+def step_impl(context):
+    try:
+        about_this_item_button = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="s0-1-25-7-18-1-92[1]-2-3-tabs-0"]'))
+        )
+        assert about_this_item_button.text is not None, "About this item button not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e
+
+
+@then('I should see the Item specifics')       
+def step_impl(context):
+    try:
+        specifics = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="s0-1-25-7-18-1-92[1]-2-3-7[0]-7[0]-4[0]-12[1]-1-2-title"]/span/span'))
+        )
+        assert specifics is not None, "Item specifics not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e    
+
+
+@then('I should see the Condition')
+def step_impl(context):
+    try:
+        condition = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="viTabs_0_is"]/div/div[2]/div/div[1]/div[1]/dl/dt/div/div/span'))
+        )
+        assert condition is not None, "Condition not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e  
+
+
+@then('I should see the Item description from the seller')
+def step_impl(context):
+    try:
+        sellerDec = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="viTabs_0_is"]/div/div[2]/div/div[1]/div[1]/dl/dt/div/div/span'))
+        )
+        assert sellerDec is not None, "Seller description not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e  
+
+
+@then('I should see the Shipping, return, and payments button')
+def step_impl(context):
+    try:
+        srpB = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="TABS_SPR"]/span'))
+        )
+        assert srpB is not None, "Shipping, return, and payments button not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e  
+    
+
+
+@then('I should see the Shipping and handling')
+def step_impl(context):
+    try:
+        shipHandle = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="s0-1-25-7-18-1-92[1]-2-3-7[1]-7[1]-4[1]-59[1]-1-2-title"]/span/span'))
+        )
+        assert shipHandle is not None, "Shipping and Handling not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e  
+    
+
+
+@then('I should see the Return policy')        
+def step_impl(context):
+    try:
+        rP = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="s0-1-25-7-18-1-92[1]-2-3-7[1]-7[1]-4[1]-24[2]-1-2-title"]/span/span'))
+        )
+        assert rP is not None, "Return policy button not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e  
+    
+
+
+@then('I should see the Payment details')      
+def step_impl(context):
+    try:
+        pD = WebDriverWait(context.driver, 10).until(
+            EC.visibility_of_element_located((By.XPATH, '//*[@id="s0-1-25-7-18-1-92[1]-2-3-7[1]-7[1]-4[1]-26[3]-1-2-title"]/span/span'))
+        )
+        assert pD is not None, "Payments not found"
+    except (TimeoutException, NoSuchElementException, AssertionError) as e:
+        print(f"Exception during verification of About this item button: {e}")
+        raise e  
+    
