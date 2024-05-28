@@ -21,7 +21,7 @@ Feature: Recently Viewed Products
         When I click on Add to Cart button
         Then I should see the cart page
 
-    Scenario: Check Recently Viewed Products
+    Scenario: Check Recently Viewed Products Segment
         Given I launch Chrome Browser
         When I open homepage
         Then I should see the Recently Viewed Products section
@@ -29,7 +29,7 @@ Feature: Recently Viewed Products
         And I should see the product-1 price
         And I should see the product-1 image
 
-    Scenario: Check Recently Viewed Products
+    Scenario: Check Recently Viewed Products Details
         Given I launch Chrome Browser
         When I open homepage
         Then I should see the Recently Viewed Products section
