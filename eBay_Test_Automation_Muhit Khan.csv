@@ -1,0 +1,155 @@
+﻿,,Project Name ,eBay,,,,
+wh,,Module Name,Web,,,,
+,,Created By,MUHIT KHAN,,,,
+,,Creation Date,5/26/2024,,,,
+,,Reviewed By,,,,,
+,,Reviewed Date,MM-DD-YYYY,,,,
+,,,,,,,
+Test Case ID,Feature,Scenario,Test Step,Expected Result,Actual Result,Test Result,Automation Status
+TC_001,Homepage,Homepage Test,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_002,,,Open homepage,eBay homepage loads successfully,As expected,Passed,
+TC_003,,,Verify eBay logo is displayed,eBay logo is visible,As expected,Passed,
+TC_004,,,Verify search bar is displayed,Search bar is visible,As expected,Passed,
+TC_005,,,Verify main content area is displayed,Main content area is visible,As expected,Passed,
+TC_006,,,Verify popular categories menu is displayed,Popular categories menu is visible,As expected,Passed,
+TC_007,,,Verify site shifting options are displayed,Site shifting options are visible,As expected,Passed,
+TC_008,,,Verify footer is displayed,Footer is visible,As expected,Passed,
+TC_009,Navigation,Test Ebay Navigation Bar Links,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_010,,,Open homepage,eBay homepage loads successfully,As expected,Passed,
+TC_011,,,Verify 'Saved' link is displayed,'Saved' link is visible in the navigation bar,As expected,Passed,
+TC_012,,,Verify 'Electronics' link is displayed,'Electronics' link is visible in the navigation bar,As expected,Passed,
+TC_013,,,Verify 'Motors' link is displayed,'Motors' link is visible in the navigation bar,As expected,Passed,
+TC_014,,,Verify 'Fashion' link is displayed,'Fashion' link is visible in the navigation bar,As expected,Passed,
+TC_015,,,Verify 'Collectibles and Art' link is displayed,'Collectibles and Art' link is visible in the navigation bar,As expected,Passed,
+TC_016,,,Verify 'Sports' link is displayed,'Sports' link is visible in the navigation bar,As expected,Passed,
+TC_017,,,Verify 'Health & Beauty' link is displayed,'Health & Beauty' link is visible in the navigation bar,As expected,Passed,
+TC_018,,,Verify 'Industrial equipment' link is displayed,'Industrial equipment' link is visible in the navigation bar,As expected,Passed,
+TC_019,,,Verify 'Home & Garden' link is displayed,'Home & Garden' link is visible in the navigation bar,As expected,Passed,
+TC_020,,,Verify 'Deals' link is displayed,'Deals' link is visible in the navigation bar,As expected,Passed,
+TC_021,,,Verify 'Sell' link is displayed,'Sell' link is visible in the navigation bar,As expected,Passed,
+TC_022,Product Page,User can view product details,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_023,,,Open homepage,eBay homepage loads successfully,As expected,Passed,
+TC_024,,,"Search for ""HP""","Search results for ""HP"" are displayed",As expected,Passed,
+TC_025,,,View the product details of the seventh product,Product details page for the seventh product is loaded,As expected,Passed,
+TC_026,,,Verify product name is displayed,Product name is visible on the product page,As expected,Passed,
+TC_027,,,Verify product price is displayed,Product price is visible on the product page,As expected,Passed,
+TC_028,,,Verify product description is displayed,Product description is visible on the product page,As expected,Passed,
+TC_029,,,Verify product image is displayed,Product image is visible on the product page,As expected,Passed,
+TC_030,Search,Search for a product,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_031,,,Open homepage,eBay homepage loads successfully,As expected,Passed,
+TC_032,,,"Search for ""iPhone""","Search results page for ""iPhone"" is displayed",As expected,Passed,
+TC_033,,,"Search for ""Samsung""","Search results page for ""Samsung"" is displayed",As expected,Passed,
+TC_034,,,"Search for ""Nokia""","Search results page for ""Nokia"" is displayed",As expected,Passed,
+TC_035,Search Product Information,Search for a product,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_036,,,Open homepage,eBay homepage loads successfully,As expected,Passed,
+TC_037,,,Verify search bar is displayed,Search bar is visible,As expected,Passed,
+TC_038,,,"Search for ""Dell""","Search results page for ""Dell"" is displayed",As expected,Passed,
+TC_039,,,Verify product name is displayed,Product name is visible in the search results,As expected,Passed,
+TC_040,,,Verify price of the product is displayed,Price of the product is visible in the search results,As expected,Passed,
+TC_041,,,Verify condition of the product is displayed,Condition of the product is visible in the search results,As expected,Passed,
+TC_042,,,Verify product image is displayed,Product image is visible in the search results,As expected,Passed,
+TC_043,Recently Viewed Products,Product-1 Add to Cart,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_044,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_045,,,I should see the search bar,Search bar is visible,,As expected,Passed
+TC_046,,,"Search for ""Asus""","Search results for ""Asus"" are displayed",,As expected,Passed
+TC_047,,,"I should see ""Asus"" in the search results",Asus is visible in the search result,,As expected,Passed
+TC_048,,,I view the product details of the seventh product,Product details page for the seventh product is loaded,,As expected,Passed
+TC_049,,,I should see the Add to Cart button,Add to cart button is visible,,As expected,Passed
+TC_050,,,Click on Add to Cart button,Cart page is displayed,,As expected,Passed
+TC_051,,,I should see the cart page,Cart page is displayed,,As expected,Passed
+TC_052,,Product-2 Add to Cart ,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_053,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_054,,,I should see the search bar,Search bar is visible,,As expected,Passed
+TC_055,,,"Search for ""Asus""","Search results for ""Asus"" are displayed",,As expected,Passed
+TC_056,,,"I should see ""Asus"" in the search results",Asus is visible in the search result,,As expected,Passed
+TC_057,,,I view the product details of the seventh product,Product details page for the seventh product is loaded,,As expected,Passed
+TC_058,,,I should see the Add to Cart button,Add to cart button is visible,,As expected,Passed
+TC_059,,,Click on Add to Cart button,Cart page is displayed,,As expected,Passed
+TC_060,,,I should see the cart page,Cart page is displayed,,As expected,Passed
+TC_061,,Check Recently Viewed Products,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_062,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_063,,,I should see the Recently Viewed Products section,Recently Viewed Products section is visible,,As expected,Passed
+TC_064,,,I should see the product-1 title,product-1 title is visible,,As expected,Passed
+TC_065,,,I should see the product-1 price,product-1 price is visible,,As expected,Passed
+TC_066,,,I should see the product-1 image,product-1 image is visible,,As expected,Passed
+TC_067,,Check Recently Viewed Products,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_068,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_069,,,I should see the Recently Viewed Products section,Recently Viewed Products section is visible,,As expected,Passed
+TC_070,,,I should see the product-1 title,product-1 title is visible,,As expected,Passed
+TC_071,,,I view the product page of product-1,Product page is displayed,,As expected,Passed
+TC_072,,,I should see the product name on the product page,Product name is visible,,As expected,Passed
+TC_073,,,I should see the product price on the product page,Product price is visible,,As expected,Passed
+TC_074,,,I should see the product description on the product page,Product description is visible,,As expected,Passed
+TC_075,,,I should see the product image on the product page,Product image is visible,,As expected,Passed
+TC_076,Cart,Cart Page,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_077,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_078,,,I should see the cart icon,Cart icon is visible,,As expected,Passed
+TC_079,,,Click on cart icon,Cart page is displayed,,As expected,Passed
+TC_080,,,I should see the cart page,Cart page is displayed,,As expected,Passed
+TC_081,,,I should see the Empty Cart message,Empty cart message is visible,,As expected,Passed
+TC_082,,,I should see the Sign In button,Sign In button is visible,,As expected,Passed
+TC_083,,Add to Cart,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_084,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_085,,,I should see the search bar,Search bar is visible,,As expected,Passed
+TC_086,,,"Search for ""Asus""","Search result page for ""Asus"" is displayed",,As expected,Passed
+TC_087,,,"I should see ""Asus"" in the search results",Asus is visible in the search results,,As expected,Passed
+TC_088,,,I view the product details of the seventh product,Product details page for the seventh product is displayed,,As expected,Passed
+TC_089,,,I should see the Add to Cart button,Add to cart button is visible,,As expected,Passed
+TC_090,,,Click on Add to Cart button,Cart page is displayed,,As expected,Passed
+TC_091,,,I should see the cart page,Cart page is displayed,,As expected,Passed
+TC_092,,,I should see the product is added to cart,Product is added to cart,,As expected,Passed
+TC_093,,Remove from Cart,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_094,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_095,,,I should see the search bar,Search bar is visible,,As expected,Passed
+TC_096,,,"Search for ""Asus""","Search result for ""Asus"" is displayed",,As expected,Passed
+TC_097,,,"I should see ""Asus"" in the search results",Asus is visible in the search results,,As expected,Passed
+TC_098,,,I view the product details of the seventh product,Product details page for the seventh product is displayed,,As expected,Passed
+TC_099,,,I should see the Add to Cart button,Add to cart button is visible,,As expected,Passed
+TC_100,,,Click on Add to Cart button,Cart page is displayed,,As expected,Passed
+TC_101,,,I should see the cart page,Cart page is displayed,,As expected,Passed
+TC_102,,,I should see the product is added to cart,Product is added to cart,,As expected,Passed
+TC_103,,,I should see the remove button,Remove button is visible,,As expected,Passed
+TC_104,,,Click on remove button,Product is removed from cart,,As expected,Passed
+TC_105,,,I should see the product is removed from cart,Product is removed from cart,,As expected,Passed
+TC_106,,,Click on remove button,Empty cart message is visible,,As expected,Passed
+TC_107,,,I should see the Empty Cart message,Empty cart message is visible,,As expected,Passed
+TC_108,Customer also bought,User can see Customer also bought items,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_109,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_110,,,"Search for ""HP""","Search result for ""HP"" is displayed",,As expected,Passed
+TC_111,,,"I should see ""HP"" in the search results",HP is visible in the search results,,As expected,Passed
+TC_112,,,I view the product details of the seventh product,Product details page for the seventh product is displayed,,As expected,Passed
+TC_113,,,I should see the Customer also boughts section,Customer also bought section is visible,,As expected,Passed
+TC_114,,,I should see Customer also bought item's condition,Customer also bought item's condition is visible,,As expected,Passed
+TC_115,,,I should see Customer also bought item's price,Customer also bought item's price is visible,,As expected,Passed
+TC_116,,,I should see Customer also bought item's title,Customer also bought item's title is visible,,As expected,Passed
+TC_117,,Visit Customer also bought's page,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_118,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_119,,,"Search for ""HP""","Search result for ""HP"" is displayed",,As expected,Passed
+TC_120,,,"I should see ""HP"" in the search results",HP is visible in the search results,,As expected,Passed
+TC_121,,,I view the product details of the seventh product,Product details page for the seventh product is displayed,,As expected,Passed
+TC_122,,,I should see the Customer also boughts section,Customer also bought section is visible,,As expected,Passed
+TC_123,,,Click on the first Customer also boughts Item,Product page is displayed,,As expected,Passed
+TC_124,,,I should see the product name on the product page,Product name is visible,,As expected,Passed
+TC_125,,,I should see the product price on the product page,Product price is visible,,As expected,Passed
+TC_126,,,I should see the product description on the product page,Product description is visible,,As expected,Passed
+TC_127,,,I should see the product image on the product page,Product image is visible,,As expected,Passed
+TC_128,Similar Items,User can see similar items,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_129,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_130,,,"Search for ""HP""","Search result for ""HP"" is displayed",,As expected,Passed
+TC_131,,,"I should see ""HP"" in the search results",HP is visible in the search results,,As expected,Passed
+TC_132,,,I view the product details of the seventh product,Product details page for the seventh product is displayed,,As expected,Passed
+TC_133,,,I should see the Similar Items section,Similar items section is visible,,As expected,Passed
+TC_134,,,I should see Similar Item's title,Similar item's title is visible,,As expected,Passed
+TC_135,,,I should see Similar Item's condition,Similar item's condition is visible,,As expected,Passed
+TC_136,,,I should see Similar Item's price,Similar item's price is visible,,As expected,Passed
+TC_137,,Visit Similar Item's page,Launch Chrome Browser,Browser launches successfully,As expected,Passed,
+TC_138,,,Open homepage,eBay homepage loads successfully,,As expected,Passed
+TC_139,,,"Search for ""HP""","Search result for ""HP"" is displayed",,As expected,Passed
+TC_140,,,"I should see ""HP"" in the search results",HP is visible in the search results,,As expected,Passed
+TC_141,,,I view the product details of the seventh product,Product details page for the seventh product is displayed,,As expected,Passed
+TC_142,,,I should see the Similar Items section,Similar items section is visible,,As expected,Passed
+TC_143,,,Click on the first Similar Item,Product page is displayed,,As expected,Passed
+TC_144,,,I should see the product name on the product page,Product name is visible,,As expected,Passed
+TC_145,,,I should see the product price on the product page,Product price is visible,,As expected,Passed
+TC_146,,,I should see the product description on the product page,Product description is visible,,As expected,Passed
+TC_147,,,I should see the product image on the product page,Product image is visible,,As expected,Passed
